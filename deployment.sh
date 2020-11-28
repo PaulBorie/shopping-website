@@ -33,7 +33,7 @@ rm nginx-conf/nginx.conf
 
 sed -i -e "s/d1/$FST_DOMAIN/g" -e "s/d2/$SND_DOMAIN/g" nginx-conf/temp-nginx.conf
 
-mv nginx-conf/temp-nginx.conf nginx-conf/nginx.conf
+mv nginx-temp-conf nginx-conf/nginx.conf
 
 #update docker-compose.yml conf
 
