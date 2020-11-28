@@ -1,0 +1,35 @@
+{
+    "music": [
+        {
+            "id":1,
+            "name": "VRAIE GOV",
+            "price": 1299,
+            "imgName": "album2.jpg",
+            "imgBack":"tracklist.png"
+        },
+        {
+            "id":2,
+            "name": "Die&Retry",
+            "price": 1299,
+            "imgName": "album1.jpg",
+            "imgBack":"tracklist.png"
+        }
+    ],
+    "merch": [
+        {
+            "id":3,
+            "name": "T-Shirt",
+            "price": 1999,
+            "imgName": "tshirt-front.jpeg",
+            "imgBack": "tshirt-back.jpeg"
+        },
+        {
+            "id":4,
+            "name": "Hoodie",
+            "price": 3999,
+            "imgName": "hoodie1-grey.jpeg",
+            "imgBack":"hoodieback1-grey.jpeg"
+        }
+        
+    ]
+}

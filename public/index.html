@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="shortcut icon" href="Images/favicon.ico">
+        <title>The BackStreeT</title>
+        <meta name="description" content="This is the description">
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <div class = 'gif'>
+          <header class="main-header">
+                <nav class="nav main-nav">
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="store">STORE</a></li>
+                        <li><a href="about.html">ABOUT</a></li>
+                    </ul>
+                </nav>
+                <h1 class="band-name band-name-large">The BackStreeT</h1>
+            </header>
+            <section class="content-section-container">
+                <div class="cont">
+                        <img  onclick="store();" src="/Images/album2.jpg"   class="image"  onmouseover="hover(this);" onmouseout="unhover(this);">
+                        <div class="middle">
+                    </div>
+                    <div>
+                        <span class="album-name"> NEW ALBUM | VRAIE GOV </span>  </span>
+                    </div>
+                </div>  
+                <div>
+                    <a href="https://soundcloud.com/">
+                        <img src="Images/soundcloud-white.png" class="soundcloud-icon">
+                    </a>
+                </div>
+            </section>
+            
+            <footer>
+                <div class="blackstripe"> </div>
+            </footer>
+        </div>
+    </body>
+    <script>
+        function hover(element) {
+            element.setAttribute('src', '/Images/tracklist.png');
+        }
+
+        function unhover(element) {
+            element.setAttribute('src', '/Images/album2.jpg');
+        }
+
+        function store() {
+            window.location.href = "/store";
+            
+        }
+    </script>
+</html>

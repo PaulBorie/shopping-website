@@ -1,0 +1,6 @@
+docker
+docker-compose
+tor
+nom de domaine qui pointe vers server
+user with username
+adresse mail
