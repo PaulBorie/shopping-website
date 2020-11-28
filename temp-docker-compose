@@ -42,18 +42,18 @@ services:
 
 volumes:
   certbot-etc:
-  certbot-var:
-  dhparam:
-    driver: local
-    driver_opts:
-      type: none
-      device: /home/username/node_project/dhparam/
-      o: bind  
+  certbot-var:  
   web-root:
     driver: local
     driver_opts:
       type: none
       device: /home/username/node_project/public/
+      o: bind
+  dhparam:
+    driver: local
+      driver_opts:
+      type: none
+      device: /home/username/node_project/dhparam/
       o: bind
  
 networks:
