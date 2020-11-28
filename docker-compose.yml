@@ -36,7 +36,7 @@ services:
       - web-root:/var/www/html
     depends_on:
       - webserver
-    command: certonly --webroot --webroot-path=/var/www/html --email taz@protonmail.com --agree-tos --no-eff-email --force-renewal -d thebacktreet.ga  -d www.thebackstreet.ga
+    command: certonly --webroot --webroot-path=/var/www/html --email mail_addr --agree-tos --no-eff-email --force-renewal -d d1 -d d2
 
 volumes:
   certbot-etc:
