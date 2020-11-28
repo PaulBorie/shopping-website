@@ -46,7 +46,7 @@ volumes:
   dhparam:
     driver: local
     driver_opts:
-      ype: none
+      type: none
       device: /home/username/node_project/dhparam/
       o: bind  
   web-root:
