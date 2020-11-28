@@ -17,11 +17,13 @@ services:
     restart: unless-stopped
     ports:
       - "80:80"
+      - "443:443"
     volumes:
       - web-root:/var/www/html
       - ./nginx-conf:/etc/nginx/conf.d
       - certbot-etc:/etc/letsencrypt
       - certbot-var:/var/lib/letsencrypt
+      - dhparam:/etc/ssl/certs
     depends_on:
       - nodejs
     networks:
@@ -41,13 +43,19 @@ services:
 volumes:
   certbot-etc:
   certbot-var:
+  dhparam:
+    driver: local
+    driver_opts:
+      ype: none
+      device: /home/username/node_project/dhparam/
+      o: bind  
   web-root:
     driver: local
     driver_opts:
       type: none
       device: /home/username/node_project/public/
       o: bind
-
+ 
 networks:
   app-network:
     driver: bridge
