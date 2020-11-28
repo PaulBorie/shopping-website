@@ -31,7 +31,7 @@ rm nginx-conf/nginx.conf
 
 #update nginx-conf
 
-sed -i -e "s/d1/$FST_DOMAIN/g" -e "s/d2/$SND_DOMAIN/g" nginx-conf/temp-nginx.conf
+sed -i -e "s/d1/$FST_DOMAIN/g" -e "s/d2/$SND_DOMAIN/g" nginx-temp-conf
 
 mv nginx-temp-conf nginx-conf/nginx.conf
 
