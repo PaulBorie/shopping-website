@@ -47,13 +47,13 @@ volumes:
     driver: local
     driver_opts:
       type: none
-      device: /home/username/node_project/public/
+      device: /home/username/workdir/public/
       o: bind
   dhparam:
     driver: local
     driver_opts:
       type: none
-      device: /home/username/node_project/dhparam/
+      device: /home/username/workdir/dhparam/
       o: bind
  
 networks:
