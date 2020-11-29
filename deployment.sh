@@ -25,7 +25,9 @@ sed -i -e "s/d1/$FST_DOMAIN/g" -e "s/d2/$SND_DOMAIN/g" nginx-conf/nginx.conf
 
 sed -i -e "s/d1/$FST_DOMAIN/g" -e "s/d2/$SND_DOMAIN/g" -e "s/username/$USERNAME/g"  -e "s/mail_addr/$MAIL/g" -e "s/workdir/$WORKDIR/g" docker-compose.yml
 
-docker-compose up  
+docker-compose up -d
+
+sleep 8
 
 # Modifying the Web Server Configuration and Service Definition
 
