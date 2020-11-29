@@ -25,6 +25,8 @@ docker-compose stop webserver
 
 mkdir dhparam
 
+chmod -R 777 dhparam
+
 sudo openssl dhparam -out /home/"$USERNAME"/node_project/dhparam/dhparam-2048.pem 2048
 
 rm nginx-conf/nginx.conf
@@ -42,6 +44,9 @@ sed -i -e "s/d1/$FST_DOMAIN/g" -e "s/d2/$SND_DOMAIN/g" -e "s/username/$USERNAME/
 rm docker-compose.yml
 
 mv temp-docker-compose docker-compose.yml
+
+cat nginx-conf/nginx.conf
+cat docker-compose.yml
 
 #Recreate the webserver service
 
