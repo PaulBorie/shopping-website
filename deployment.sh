@@ -17,14 +17,17 @@ sed -i -e "s/d1/$FST_DOMAIN/g" -e "s/d2/$SND_DOMAIN/g" nginx-conf/nginx.conf
 
 sed -i -e "s/d1/$FST_DOMAIN/g" -e "s/d2/$SND_DOMAIN/g" -e "s/username/$USERNAME/g"  -e "s/mail_addr/$MAIL/g" docker-compose.yml
 
-docker-compose up -d    
+docker-compose up -d   
 
 # Modifying the Web Server Configuration and Service Definition
+
+sleep 20 
 
 docker-compose stop webserver
 
 mkdir dhparam
 
+sudo chmod a+rwx dhparam
 chmod -R 777 dhparam
 
 sudo openssl dhparam -out /home/"$USERNAME"/node_project/dhparam/dhparam-2048.pem 2048
