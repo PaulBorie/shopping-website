@@ -41,17 +41,17 @@ rm nginx-conf/nginx.conf
 
 #update nginx-conf
 
-sed -i -e "s/d1/$FST_DOMAIN/g" -e "s/d2/$SND_DOMAIN/g" nginx-temp-conf
+sed -i -e "s/d1/$FST_DOMAIN/g" -e "s/d2/$SND_DOMAIN/g" temp/temp-nginx-conf
 
-mv nginx-temp-conf nginx-conf/nginx.conf
+mv temp/temp-nginx-conf nginx-conf/nginx.conf
 
 #update docker-compose.yml conf
 
-sed -i -e "s/d1/$FST_DOMAIN/g" -e "s/d2/$SND_DOMAIN/g" -e "s/username/$USERNAME/g"  -e "s/mail_addr/$MAIL/g" -e "s/workdir/$WORKDIR/g" temp-docker-compose
+sed -i -e "s/d1/$FST_DOMAIN/g" -e "s/d2/$SND_DOMAIN/g" -e "s/username/$USERNAME/g"  -e "s/mail_addr/$MAIL/g" -e "s/workdir/$WORKDIR/g" temp/temp-docker-compose
 
 rm docker-compose.yml
 
-mv temp-docker-compose docker-compose.yml
+mv temp/temp-docker-compose docker-compose.yml
 
 #Recreate the webserver service
 
