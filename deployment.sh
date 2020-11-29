@@ -11,7 +11,7 @@ MAIL=$6
 
 #assign the variables to the corresponding variables in the Dockerfile, nginx-conf and docker-compose.yml file
 
-sed -i -e "s/sk/$STRIPE_PUBLIC_KEY/g" -e "s/pk/$STRIPE_PRIVATE_KEY/g" Dockerfile
+sed -i -e "s/sk/$STRIPE_PRIVATE_KEY/g" -e "s/pk/$STRIPE_PUBLIC_KEY/g" Dockerfile
 
 sed -i -e "s/d1/$FST_DOMAIN/g" -e "s/d2/$SND_DOMAIN/g" nginx-conf/nginx.conf
 
