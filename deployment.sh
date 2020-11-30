@@ -59,10 +59,10 @@ docker-compose up -d --force-recreate --no-deps webserver
 
 # Renewing Certificates
 
-sed -i -e "s/username/$USERNAME/g" -e "s/workdir/$WORKDIR/g"
+sed -i -e "s/username/$USERNAME/g" -e "s/workdir/$WORKDIR/g" ssl_renew.sh
 
 line="*/5 * * * * /home/$USERNAME/$WORKDIR/ssl_renew.sh >> /var/log/cron.log 2>&1"
-(crontab -u userhere -l; echo "$line" ) | crontab -u userhere -
+(crontab -u root -l; echo "$line" ) | crontab -u root -
 
 
 
