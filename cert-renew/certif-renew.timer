@@ -1,0 +1,10 @@
+[Unit]
+Description=SSL certificate renew
+
+[Timer]
+# Define a calendar event (see `man systemd.time`)
+OnCalendar=daily
+Persistent=true
+
+[Install]
+WantedBy=timers.target

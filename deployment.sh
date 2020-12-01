@@ -59,10 +59,15 @@ docker-compose up -d --force-recreate --no-deps webserver
 
 # Renewing Certificates
 
-sed -i -e "s/username/$USERNAME/g" -e "s/workdir/$WORKDIR/g" ssl_renew.sh
+sed -i -e "s/username/$USERNAME/g" -e "s/workdir/$WORKDIR/g" cert-renew/ssl_renew.sh
 
-line="*/5 * * * * /home/$USERNAME/$WORKDIR/ssl_renew.sh >> /var/log/cron.log 2>&1"
-echo $line
+mv cert-renew/certif-renew.service /etc/systemd/system/certif-renew.service
+mv cert-renew/certif-renew.timer /etc/systemd/system/certif-renew.timer
+mv cert-renew/ssl_renew.sh /usr/local/bin/ssl_renew.sh
+
+
+systemctl enable certif-renew.timer
+systemctl start certif-renew.timer
 
 
 
