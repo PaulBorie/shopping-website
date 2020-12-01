@@ -65,6 +65,7 @@ mv cert-renew/certif-renew.service /etc/systemd/system/certif-renew.service
 mv cert-renew/certif-renew.timer /etc/systemd/system/certif-renew.timer
 mv cert-renew/ssl_renew.sh /usr/local/bin/ssl_renew.sh
 
+sleep 8
 
 systemctl enable certif-renew.timer
 systemctl start certif-renew.timer
