@@ -70,6 +70,11 @@ sleep 8
 systemctl enable certif-renew.timer
 systemctl start certif-renew.timer
 
+# Set up the scipt checkcertif.sh to check the certif start date and en date
+
+
+sed -i -e "s/username/$USERNAME/g" -e "s/workdir/$WORKDIR/g" -e "s/d1/$FST_DOMAIN/g" cert/checkcertif.sh
+
 
 
 
