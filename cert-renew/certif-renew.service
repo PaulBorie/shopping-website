@@ -4,5 +4,5 @@ Description=SSL certificate renew
 [Service]
 Type=simple
 ExecStart=/usr/local/bin/ssl_renew.sh
-StandardOutput=file:/var/log/cert.log
+StandardOutput=journal
 StandardError=file:/var/log/errorcert.log
