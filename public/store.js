@@ -102,7 +102,8 @@ function removeCartItem(event) {
 function quantityChanged(event) {
     var input = event.target
     if (isNaN(input.value) || input.value <= 0) {
-        input.value = 1
+        var buttonClicked = event.target
+        buttonClicked.parentElement.parentElement.remove()
     }
     updateCartTotal()
 }
