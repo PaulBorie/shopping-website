@@ -16,7 +16,7 @@ This model does not implement a database to manage the stock of your products, t
 
 ## Installation/Deployment
 
-Deploy a https shopping website payment-ready linked to your domain name very easily and quickly by following these commands line :
+Deploy a https ***payment-ready** shopping website linked to your **domain name** in a few minutes by following these **commands lines** :
 
 * Establish a connection to your **VPS** via **ssh** or other preferred manners and execute the following commands :
 
