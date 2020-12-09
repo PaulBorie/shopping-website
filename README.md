@@ -1,4 +1,4 @@
-# Online selling website model using Node.js, Nginx for the server, Stripe for the payment part and Docker for the deployment
+# Deploy an online Shopping Website in a few command line thanks to Node.js, Docker and Stripe payment API 
 
 This is a general model for a fictive shopping website.The website also implements the Stripe API to allow the user to intent payment in a secure way on the website. 
 To modify the model to your own suit, just go to the items.json file and modify the differents products desccribe in this file to your own selling products. You can also modify the differents title and the overall design of the website with your own hmtl/css and images.  
