@@ -1,10 +1,11 @@
-# Online selling website model using Node.js, nginx, Stripe for the payment part and Docker for the deployment
+# Online selling website model using Node.js, Nginx for the server, Stripe for the payment part and Docker for the deployment
 
-This is a general model for a fictive shopping website. The website also implements the Stripe API to allow the user to intent payment in a secure way on the website. 
+This is a general model for a fictive shopping website.The website also implements the Stripe API to allow the user to intent payment in a secure way on the website. 
 To modify the model to your own suit, just go to the items.json file and modify the differents products desccribe in this file to your own selling products. You can also modify the differents title and the overall design of the website with your own hmtl/css and images.  
 This repository provides all the necessary scripts for the deployment of such a website on a Virtual Private Server in the cloud.
-Thanks to a Docker-compose file and a few commands lines, it deploys three Docker containers : one nginx server listening on Port 443 and acting like a reverse proxy, redirecting the client requests to the port 8080 of a contenairized node.js server. A certbot container allowing the user to obtain a SSL certificate with let's encrypt and the daily renewal of this last.  
-containerized NGINX HTTPS server with an auto-renewal of its SSL certificate.
+Thanks to a Docker-compose file and a few commands lines, it deploys three Docker containers : one nginx server serving clients on Port 443 (https) and acting like a reverse proxy, redirecting the client requests to the port 8080 of a contenairized node.js server and finally a Certbot container allowing the user to obtain a SSL certificate with let's encrypt and the daily renewal of this last. 
+The Nginx server is the entry point of your webapp, he manages the SSL certificate for https in its conf files and provides a static caching of the static ressources of your website for a lower latency for the clients. 
+
 This model doesn't not implement a database to manage the stock of your products, the products are simply manage in a static way in the items.json file. 
 
 ## Requirements
@@ -39,32 +40,16 @@ Now that Docker and Docker-compose are intalled, you can run the deployment.sh s
 ```bash
 ./deployment.sh stipe_pub_api_key stripe_private_api_key domainname email
 ```
-Now your website should be availible at yourdomain.com and you sould see the green locker indicating TLS encyption and HTTPS protocol while browsing it  
-To see if your installation is successfull: 
+Now your website should be availible at yourdomain.com and you sould see the green locker indicating TLS encyption and HTTPS protocol while browsing it.
+You can also process payment and you should see all the payments from the client on your Stripe Dashboard.
 
+To see ifthe three Docker containers are running well: 
 ```
-Docker-compose ps
+docker-compose ps
 ```
-And check your website live with a gree at yourdomain.com
-If you have any problem 
-
-
-
-
-## Usage
-
-```python
-import foobar
-
-foobar.pluralize('word') # returns 'words'
-foobar.pluralize('goose') # returns 'geese'
-foobar.singularize('phenomena') # returns 'phenomenon'
+If you have any problem during the deployment, check the logs
+```
+docker-compose logs
 ```
 
-## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-Please make sure to update tests as appropriate.
-
-## License
-[MIT](https://choosealicense.com/licenses/mit/)
