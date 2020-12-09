@@ -47,7 +47,7 @@ To see ifthe three Docker containers are running well:
 ```
 docker-compose ps
 ```
-If you have any problem during the deployment, check the logs
+If you encounter any problems during the deployment, check the logs
 ```
 docker-compose logs
 ```
