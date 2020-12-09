@@ -1,9 +1,10 @@
 # Deploy a payment-ready Shopping Website in a few command lines thanks to Node.js, Docker and Stripe payment API 
 
-This is a general model for a fictive **shopping website**.The website also implements the **Stripe API** to allow the website to process payments in a secure way. 
-To modify the model to your own suit, just go to the `items.json` file and modify the differents products desccribe in this file to your own selling products. You can also modify the differents title and the overall design of the website with your own hmtl/css and images.  
+This is a general model for a fictive **shopping website**.The website also implements the **Stripe API** to allow the website to process payments in a secure way.To modify the model to your own suit, just go to the `items.json` file and modify the differents products desccribe in this file to your own selling products. You can also modify the differents title and the overall design of the website with your own hmtl/css and images.  
+
 This repository provides all the necessary scripts for the deployment of such a website on a Virtual Private Server in the Cloud very quicly and easily.
 Thanks to a Docker-compose file and a few commands lines, it deploys **three Docker containers** : one **Nginx server** serving clients requests on Port 443 (https) and acting like a reverse proxy, redirecting the client requests to the port 8080 of a contenairized **node.js application** and finally a **Certbot container** allowing the registration of a SSL certificate for your domain name with **let's encrypt** and the daily renewal of this last. 
+
 The Nginx server is the entry point of your webapp, it manages clients requests and their load balancing, provides basic security features for the webserver like the SSL certificate for **HTTPS** in its conf files and provides a static caching of the static ressources of your website for a lower latency for the clients. 
 
 This model does not implement a database to manage the stock of your products, the products are simply managed in a static way in the `items.json` file. 
