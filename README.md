@@ -51,10 +51,6 @@ docker-compose ps
 If you encounter any problems during the deployment, check the logs
 ```
 docker-compose logs
-
-# Contributor
-
-Paul BORIE
 ```
 
 
