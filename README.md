@@ -16,9 +16,9 @@ This model does not implement a database to manage the stock of your products, t
 
 ## Installation/Deployment
 
-* Establish a connection to your VPS via **SSH** or other preferred manners and execute the following commands :
+* Establish a connection to your **VPS** via **ssh** or other preferred manners and execute the following commands :
 
-* If there is no user add a user :
+* If there is no user add a **user** :
 ```bash
 sudo adduser username
 ```
@@ -46,7 +46,7 @@ To check if the three Docker containers are running well:
 ```
 docker-compose ps
 ```
-If you encounter any problems during the deployment, check the **logs**
+If you encounter any problems during the deployment, check the logs
 ```
 docker-compose logs
 ```
