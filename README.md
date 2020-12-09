@@ -1,10 +1,10 @@
 # Deploy an online Shopping Website in a few command lines thanks to Node.js, Docker and Stripe payment API 
 
-This is a general model for a fictive shopping website.The website also implements the Stripe API to allow the user to intent payment in a secure way on the website. 
-To modify the model to your own suit, just go to the items.json file and modify the differents products desccribe in this file to your own selling products. You can also modify the differents title and the overall design of the website with your own hmtl/css and images.  
+This is a general model for a fictive **shopping website**.The website also implements the **Stripe API** to allow the user to intent payment in a secure way on the website. 
+To modify the model to your own suit, just go to the `items.json` file and modify the differents products desccribe in this file to your own selling products. You can also modify the differents title and the overall design of the website with your own hmtl/css and images.  
 This repository provides all the necessary scripts for the deployment of such a website on a Virtual Private Server in the cloud.
-Thanks to a Docker-compose file and a few commands lines, it deploys three Docker containers : one nginx server serving clients on Port 443 (https) and acting like a reverse proxy, redirecting the client requests to the port 8080 of a contenairized node.js server and finally a Certbot container allowing the user to obtain a SSL certificate with let's encrypt and the daily renewal of this last. 
-The Nginx server is the entry point of your webapp, he manages the SSL certificate for https in its conf files and provides a static caching of the static ressources of your website for a lower latency for the clients. 
+Thanks to a Docker-compose file and a few commands lines, it deploys **three Docker containers** : one **Nginx server** serving clients on Port 443 (https) and acting like a reverse proxy, redirecting the client requests to the port 8080 of a contenairized **node.js server** and finally a **Certbot container** allowing the user to obtain a **SSL certificate** with **let's encrypt** and the daily renewal of this last. 
+The Nginx server is the entry point of your webapp, it manages clients requests and their **load balancing**, provides basic security features for the webserver like the SSL certificate for **https** in its conf files and provides a **static caching** of the static ressources of your website for a lower latency for the clients. 
 
 This model doesn't not implement a database to manage the stock of your products, the products are simply manage in a static way in the items.json file. 
 
@@ -43,7 +43,7 @@ cd webserver
 Now your website should be availible at yourdomain.com and you sould see the green locker indicating TLS encyption and HTTPS protocol while browsing it.
 You can also process payment and you should see all the payments from the client on your Stripe Dashboard.
 
-To see ifthe three Docker containers are running well: 
+To check if the three Docker containers are running well: 
 ```
 docker-compose ps
 ```
