@@ -12,7 +12,7 @@ This model does not implement a database to manage the stock of your products, t
 ## Requirements
 
 * A **Linux Virtual Private Server** (VPS) hosted in the Cloud or a server of your own (Cloud services providers usually give credits to new users)
-* A **domain name** : you can register some for free at https://www.freenom.com, pointing to this VPS
+* A **domain name** pointing to this **VPS** : you can register some for free at https://www.freenom.com
 * A **merchant account** at https://stripe.com and the stripe public api_key and private api_key providing by the account
 
 ## Installation/Deployment
