@@ -16,7 +16,7 @@ This model does not implement a database to manage the stock of your products, t
 
 ## Installation/Deployment
 
-Deploy a https ***payment-ready** shopping website linked to your **domain name** in a few minutes by following these **commands lines** :
+Deploy a https **payment-ready** shopping website linked to your **domain name** in a few minutes by following these **commands lines** :
 
 * Establish a connection to your **VPS** via **ssh** or other preferred manners and execute the following commands :
 
@@ -51,6 +51,10 @@ docker-compose ps
 If you encounter any problems during the deployment, check the logs
 ```
 docker-compose logs
+
+# Contributor
+
+Paul BORIE
 ```
 
 
