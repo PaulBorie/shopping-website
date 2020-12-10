@@ -15,6 +15,22 @@ This model does not implement a database to manage the stock of your products, t
 * A **domain name** pointing to the **ip address** of this **VPS** : you can register one for free at https://www.freenom.com
 * A **merchant account** at https://stripe.com and the stripe public api_key and private api_key provided by the account
 
+## Test the website locally (only HTTP)
+
+Create a .env file with your Stripe API keys credentials. You will also need Node installed on your computer to launch the server. 
+
+```bash
+git clone https://github.com/PaulBorie/shopping-website.git website
+cd website
+touch .env
+PRIVATE_KEY="your_stripe_private_key_here"
+PUBLIC_KEY="your_stripe_public_key_here"
+echo STRIPE_SECRET_KEY=$PRIVATE_KEY >> .env
+echo STRIPE_PUBLIC_KEY=$PUBLIC_KEY >> .env
+node server.js 
+```
+You can see the website live at `http://localhost:8080/` on your webrowser
+
 ## Installation/Deployment
 
 Deploy a https **payment-ready** shopping website linked to your **domain name** in a few minutes by following these **commands lines** :
@@ -29,7 +45,7 @@ sudo adduser username
 
 ```bash
 cd /home/username
-git clone <thisrepository> webserver
+git clone https://github.com/PaulBorie/shopping-website.git webserver
 ```
 * Go to the folder just created and run the `install.sh` script to install **Docker and Docker-Compose** if they are not already installed on your VPS
 
