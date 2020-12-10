@@ -58,7 +58,7 @@ cd webserver
 ```bash
 ./deployment.sh stipe_pub_api_key stripe_private_api_key domainname email
 ```
-Now your website should be **availible** at **yourdomain.com** and you sould see the green locker indicating TLS encyption and HTTPS protocol while browsing it.
+Now your website should be **available** at **yourdomain.com** and you sould see the green locker indicating TLS encyption and HTTPS protocol while browsing it.
 You can also process payment and you should see all the payments from the clients on your **Stripe Dashboard**. The SSL certificates will be automatically renewed everyday.
 
 To check if the three Docker containers are running well: 
