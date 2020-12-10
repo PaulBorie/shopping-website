@@ -69,5 +69,3 @@ If you encounter any problems during the deployment, check the logs
 ```
 docker-compose logs
 ```
-
-

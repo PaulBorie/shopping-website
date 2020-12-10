@@ -5,7 +5,6 @@ if(process.env.NODE_ENV !== 'production'){
 const stripeSecretKey = process.env.STRIPE_SECRET_KEY
 const stripePublicKey = process.env.STRIPE_PUBLIC_KEY
 console.log(stripeSecretKey, stripePublicKey)
-console.log(process.env.NODE_ENV)
 const express = require('express')
 const app = express()
 const fs = require('fs')
@@ -169,5 +168,5 @@ app.post('/pay', async (request, response) => {
       return response.status(500).send({error: 'Unexpected status ' + intent.status});
     }
   }
-
+console.log("browse the website at http://localhost:8080/")
 app.listen(8080)
