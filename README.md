@@ -31,7 +31,7 @@ node server.js
 ```
 You can see the website live at `http://localhost:8080/` on your webrowser
 
-## Installation/Deployment
+## Installation/Deployment in the Cloud
 
 Deploy a https **payment-ready** shopping website linked to your **domain name** in a few minutes by following these **commands lines** :
 
